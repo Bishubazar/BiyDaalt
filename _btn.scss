@@ -1,0 +1,30 @@
+@import 'vars';
+.main__btn {
+	border-radius: 30px;
+	height: 50px;
+	width: 200px;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	background: $blue;
+	color: $white;
+	text-transform: uppercase;
+	margin-left: 10px;
+	transition: $transition;
+	border: 1px solid $blue;
+	&:hover {
+		border: 1px solid $dark;
+		background: transparent;
+		color: $dark;
+	}
+}
+
+.outline-btn {
+	border: 1px solid $dark;
+	background: transparent;
+	color: $dark;
+	&:hover {
+		color: $white;
+		background: $dark;
+	}
+}

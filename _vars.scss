@@ -1,0 +1,60 @@
+// RaleWay font
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600&display=swap');
+
+// Noto sans
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200;300;400;500;600&display=swap');
+
+// Trebuchet
+@import url('http://fonts.cdnfonts.com/css/trebuchet-ms-2');
+
+$light: #f7f6fb;
+$dark: #272829;
+$grey: #787878;
+$white: #fff;
+$blue: #0563bb;
+$blue-grey: #f1edff;
+$transition: 0.3s ease;
+$container-lg: 1170px;
+
+.big__header {
+	// font-size: 7.1vw;
+	// line-height: 7.6vw;
+	font-size: 100px;
+	line-height: 116px;
+	margin-bottom: 20px;
+	font-weight: bold;
+}
+
+.sub__header {
+	padding: 14px 40px;
+	display: inline-block;
+	border-radius: 30px;
+	background: $blue-grey;
+	font-size: 20px;
+	font-family: 'Noto Sans';
+	font-weight: 500;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	color: $blue;
+	margin-bottom: 31px;
+}
+
+.title {
+	font-size: 44px;
+	line-height: 50px;
+	margin-bottom: 28px;
+	margin-bottom: 75px;
+}
+.medium__title {
+	font-size: 34px;
+	line-height: 44px;
+}
+.main__p {
+	line-height: 35px;
+	margin-bottom: 33px;
+}
+.container-sc {
+	max-width: $container-lg !important;
+	width: 100%;
+	// margin: auto;
+}
