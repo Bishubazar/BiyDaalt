@@ -275,7 +275,14 @@
           form.addEventListener('submit', e => {
                e.preventDefault()
                fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-                    .then(response => alert(" Хүлээн авлаа...")).catch(error => console.error('Error!', error.message))
+                    .then(response => alert(" Хүлээн авлаа...")).catch(error => console.error('Error!', error.message));
+               
+            // Reset field after submit
+            const inputs = document.querySelectorAll('#email__field, #name__field');
+
+            inputs.forEach(input => {
+                input.value = '';
+            });
           })
      </script>
 </body>
