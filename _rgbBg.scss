@@ -1,0 +1,26 @@
+@mixin rgbBg() {
+	background: linear-gradient(
+			120deg,
+			rgb(4, 229, 229),
+			rgb(80, 115, 184),
+			rgb(16, 152, 173),
+			rgb(7, 179, 155),
+			rgb(111, 186, 130),
+			rgb(4, 229, 229)
+		)
+		0% 0% / 300% 300%;
+	animation: 3s ease-in-out 0s infinite rgb;
+	@keyframes rgb {
+		0% {
+			background-position: 15% 0%;
+		}
+
+		50% {
+			background-position: 85% 100%;
+		}
+
+		100% {
+			background-position: 15% 0%;
+		}
+	}
+}

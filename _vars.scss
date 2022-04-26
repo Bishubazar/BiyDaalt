@@ -7,12 +7,21 @@
 // Trebuchet
 @import url('http://fonts.cdnfonts.com/css/trebuchet-ms-2');
 
+// Teko
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap');
+
+// Poppins
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
 $light: #f7f6fb;
 $dark: #272829;
+$black: #000;
 $grey: #787878;
 $white: #fff;
 $blue: #0563bb;
 $blue-grey: #f1edff;
+$cyan: rgb(4, 229, 229);
+$cyan-sub: #03bce4;
 $transition: 0.3s ease;
 $container-lg: 1170px;
 
@@ -40,14 +49,22 @@ $container-lg: 1170px;
 }
 
 .title {
-	font-size: 44px;
+	font-size: 70px;
 	line-height: 50px;
-	margin-bottom: 28px;
-	margin-bottom: 75px;
+	margin-top: 35px;
+	margin-bottom: 50px;
+	// color: rgb(255, 255, 255);
 }
+.span__cyan {
+	color: $cyan;
+	font-family: inherit;
+}
+
 .medium__title {
 	font-size: 34px;
 	line-height: 44px;
+
+	font-weight: 300 !important;
 }
 .main__p {
 	line-height: 35px;

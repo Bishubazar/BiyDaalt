@@ -6,25 +6,25 @@
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
-	background: $blue;
+	background: $cyan-sub;
 	color: $white;
 	text-transform: uppercase;
 	margin-left: 10px;
 	transition: $transition;
-	border: 1px solid $blue;
+	border: 1px solid $cyan-sub;
 	&:hover {
 		border: 1px solid $dark;
-		background: transparent;
 		color: $dark;
+		background: $white;
 	}
 }
 
 .outline-btn {
-	border: 1px solid $dark;
-	background: transparent;
-	color: $dark;
+	border: 1px solid $white;
+	background: $dark;
+	color: $white;
 	&:hover {
-		color: $white;
-		background: $dark;
+		color: $dark;
+		background: $white;
 	}
 }
