@@ -64,8 +64,8 @@
                               Миний Портфолиод тавтай морил
                          </h4>
                          <div class="banner__button">
-                              <a href="#projets" class="main__btn outline-btn">Прожект</a>
-                              <a href="#about" class="main__btn">Миний Тухай</a>
+                              <a href="#projets" class="main__btn outline-btn">Projects</a>
+                              <a href="#about" class="main__btn">About ME</a>
                          </div>
                     </div>
                </div>
@@ -122,7 +122,11 @@
                <h2 class="title text-white" data-aos="flip-up">
                     My <span class="span__cyan">Skills</span>
                </h2>
-               <div class="skill__content">
+               <div id="skill__content"></div>
+
+               <!-- <div id="multiCard"></div> -->
+
+               <!-- <div class="skill__content">
                     <div class="skill d-flex flex-column text-center" data-aos="zoom-out-down" data-aos-duration="1000"
                          data-aos-delay=300">
                          <i class="bi bi-pencil"></i>
@@ -158,7 +162,7 @@
                               #" class="main__btn">Github Profile</a>
                     </div>
 
-               </div>
+               </div> -->
           </div>
      </section>
      <section id="projects">
@@ -178,7 +182,7 @@
                                    Bakery Template Practice
                               </h3>
                               <p>Анх HTML CSS сурч байхдаа дадлагын журмаар хийж үзэж байсан. </p>
-                              <a href="https://bakery-sigma.vercel.app/" target="_blank">Орж үзэх<i
+                              <a href="https://bakery-sigma.vercel.app/" target="_blank">Open WebSite<i
                                         class="bi bi-box-arrow-up-left"></i></a>
                          </div>
                     </div>
@@ -189,7 +193,7 @@
                                    thehover.tech
                               </h3>
                               <p> Бүгд СЭЗИС-ийн МСМ-нийн тэнхимийнхэн.</p>
-                              <a href="https://imdola.com/" target="_blank">Орж үзэх<i
+                              <a href="https://imdola.com/" target="_blank">Open WebSite<i
                                         class="bi bi-box-arrow-up-left"></i></a>
                          </div>
                     </div>
@@ -200,7 +204,7 @@
                                    Altantulga.com
                               </h3>
                               <p>Хамгийн анхны захиалгаар хийж өгсөн Website.</p>
-                              <a href="http://altantulga.com/" target="_blank">Орж үзэх<i
+                              <a href="http://altantulga.com/" target="_blank">Open WebSite<i
                                         class="bi bi-box-arrow-up-left"></i></a>
                          </div>
                     </div>
@@ -213,7 +217,7 @@
                               </h3>
                               <p>Миний хамгийн удаан хийсэн Website. Нэг алдааг засангууд дахиад өөр алдаа гарч ирж
                                    байсан учраас маш олон юмыг сурч авсан.</p>
-                              <a href="https://imdola.com/" target="_blank">Орж үзэх<i
+                              <a href="https://imdola.com/" target="_blank">Open WebSite<i
                                         class="bi bi-box-arrow-up-left"></i></a>
                          </div>
                     </div>
@@ -255,7 +259,7 @@
                                    required="" />
                          </div>
                          <div class="form-group d">
-                              <input type="submit" name="submit" class="main__btn" value="Илгээх" />
+                              <input type="submit" name="submit" class="main__btn" value="SEND" />
                          </div>
                     </form>
                </div>
@@ -265,7 +269,7 @@
      <footer>
           <div class="container-sc mx-auto">
                <div class="footer__content d-flex justify-content-between align-items-center">
-                    <p>All right Reserved</p>
+                    <p>Built By Fl1p</p>
                     <ul class="d-flex justify-content-center align-items-center">
                          <li><a href="https://www.facebook.com/sokobishu/" target="_blank"><i
                                         class="bi bi-facebook"></i></a>
@@ -303,6 +307,146 @@
           }
           );
      </script>
+
+     <script>
+          var skillData = [
+               {
+                    "title": "Skills",
+                    "icon": "bi bi-pencil",
+                    "parag": "Ихэвчлэн анимэ дүрүүд харж зурдаг. Instagram-руу орж сонирхоод үзээрэй.",
+                    "button": "Зураг харах",
+                    "link": "https://www.instagram.com/s_bishu04/"
+               },
+               {
+                    "title": "Gaming",
+                    "icon": "bi bi-pc-display",
+                    "parag": "FPS, BR төрлийн тоглоом дажгүй тоглодог. Гэхдээ оюутан болоод хувийн чадвар багассан.",
+                    "button": "Steam Profile",
+                    "link": "https://steamcommunity.com/id/fl1pST/"
+               },
+               {
+                    "title": "Web Developement",
+                    "icon": "bi bi-code-slash",
+                    "parag": "Шинэ сурмаар байгаа зүйлээ шууд хийж оролдож үздэг. Ингэснээр илүү хурдан сурч цаашдаа ашиглахад амар болдог.",
+                    "button": "Github Profile",
+                    "link": "https://github.com/fl1pHover"
+               }
+          ]
+
+          dynamicSkillCard();
+
+          function dynamicSkillCard() {
+
+               for (i = 0; i < skillData.length; i++) {
+
+                    //Creating div card-body
+                    var card = document.createElement("div");
+                    card.classList.add("skill");
+
+                    var icon = document.createElement("i");
+                    icon.classList.add(skillData[0].icon);
+                    card.appendChild(icon);
+
+                    //Creating h3 card-title
+                    var cardTitle = document.createElement("h3");
+                    cardTitle.classList.add("medium__title text-white");
+                    cardTitle.innerHTML = skillData[0].title;
+                    card.appendChild(cardTitle);
+
+                    //Creating p card-text
+                    var cardText = document.createElement("p");
+                    cardText.classList.add("card-text");
+                    cardText.innerHTML = skillData[0].parag;
+                    card.appendChild(cardText);
+
+                    //3 line span
+                    var cardSpan = document.createElement("span");
+                    cardSpan.classList.add("three__line");
+                    card.appendChild(cardSpan);
+
+                    //Creating a btn
+                    var button = document.createElement("a");
+                    button.href = 'link';
+                    button.innerHTML = skillData[0].button;
+                    card.appendChild(button);
+
+                    var multiCard = document.getElementById("skill__content");
+                    multiCard.appendChild(card);
+               }
+          }
+
+
+     </script>
+     <!-- <script>
+          var myCard = [
+               {
+                    "title": "Card title 1",
+                    "image": "img/img1.jpg",
+                    "parag": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+                    "button": "Go somewhere"
+               },
+               {
+                    "title": "Card title 2",
+                    "image": "img/img2.jpg",
+                    "parag": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+                    "button": "Go somewhere"
+               },
+               {
+                    "title": "Card title 3",
+                    "image": "img/img3.jpg",
+                    "parag": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+                    "button": "Go somewhere"
+               }
+          ]
+
+          multiDynamicCard();
+
+          function multiDynamicCard() {
+
+               for (i = 0; i < myCard.length; i++) {
+
+                    //Creating html div and adding class to it
+                    var card = document.createElement("div");
+                    card.classList.add("card");
+                    card.style.width = '18rem';
+
+                    //Creating img tag
+                    var img = document.createElement("img");
+                    img.src = myCard[i].image;
+                    img.classList.add('card-img-top');
+                    card.appendChild(img);
+
+                    //Creating div card-body
+                    var cardBody = document.createElement("div");
+                    cardBody.classList.add("card-body");
+                    card.appendChild(cardBody);
+
+                    //Creating h5 card-title
+                    var cardTitle = document.createElement("h5");
+                    cardTitle.classList.add("card-title");
+                    cardTitle.innerHTML = myCard[0].title;
+                    cardBody.appendChild(cardTitle);
+
+                    //Creating p card-text
+                    var cardText = document.createElement("p");
+                    cardText.classList.add("card-text");
+                    cardText.innerHTML = myCard[0].parag;
+                    cardBody.appendChild(cardText);
+
+                    //Creating a btn btn-primary
+                    var button = document.createElement("a");
+                    button.href = 'link';
+                    button.classList.add("btn");
+                    button.classList.add("btn-primary");
+                    button.innerHTML = myCard[0].button;
+                    cardBody.appendChild(button);
+
+                    var multiCard = document.getElementById("multiCard");
+                    multiCard.appendChild(card);
+               }
+          }
+     </script> -->
+
 </body>
 
 </html>
